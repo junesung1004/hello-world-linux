@@ -12,10 +12,14 @@ import com.example.helloworld.GreetingRepository;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequiredArgsConstructor
+// @RequiredArgsConstructor
 public class HelloController {
+
 	private final GreetingRepository greetingRepository;
 
+	public HelloController(GreetingRepository greetingRepository) {
+		this.greetingRepository = greetingRepository;
+	}
 
 	@GetMapping("/")
 	public String hello() {
