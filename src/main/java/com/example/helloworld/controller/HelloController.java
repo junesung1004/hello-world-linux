@@ -2,17 +2,19 @@ package com.example.helloworld.controller;
 
 import java.util.Optional;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.helloworld.Greeting;
-import com.example.helloworld.GreetingRepository;
+import com.example.helloworld.domain.Greeting;
+import com.example.helloworld.repository.GreetingRepository;
 
 
 
 @RestController
 // @RequiredArgsConstructor
+@CrossOrigin("*")
 public class HelloController {
 
 	private final GreetingRepository greetingRepository;

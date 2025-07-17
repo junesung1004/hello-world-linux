@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.example.helloworld.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
